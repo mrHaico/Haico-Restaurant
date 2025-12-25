@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking & Gallery</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+  }
+
+  a {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+
+  /* NAVBAR */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .navbar a:hover {
+    background-color: blue;
+    font-size: 18px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: 95vh;
+    background: url('Aa.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(19, 4, 235);
+    text-align: center;
+    font-size: 20px;
+    padding-top: 70px;
+  }
+
+  .btn {
+    background: red;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+  }
+
+  .btn:hover {
+    color: blueviolet;
+  }
+
+  /* ANIMATIONS */
+  .fade-in {
+    animation: fade 2s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fade {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .slide-up {
+    animation: slideUp 1.4s ease-in-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+button {
+    padding: 12px 20px;
+    background: #f77f30;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+  background-color: #fc6c0c;
+}
+
+.contact-form button:hover {
+    background: #df8c54;
+}
+
+  /* SERVICES */
+  .services {
+    padding: 60px;
+    text-align: center;
+  }
+
+  .service-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .box {
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* GALLERY */
+  .gallery {
+    padding: 60px;
+    text-align: center;
+  }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .gallery video {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* BOOK NOW */
+  .book {
+    padding: 60px;
+    background: white;
+    text-align: center;
+  }
+
+  .book form {
+    display: grid;
+    gap: 15px;
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .book input,
+  .book button {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+
+  .book button {
+    background: green;
+    color: white;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">MR HAICO RESTAURANT</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#book">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1 class="fade-in">Karibu MR HAICO Restaurant</h1>
+    <p class="fade-in">Fresh Food • Best Service • Great Experience</p>
+    <a href="#book" class="btn">BOOK NOW</a>
+  </section>
+
+  <!-- Extra Services -->
+  <section id="services" class="services">
+    <h2>Our Extra Services</h2>
+    <div class="service-boxes">
+      <div class="box slide-up">
+        <h3>Outdoor Catering</h3>
+        <p>Tunatoa huduma ya catering kwa event mbalimbali.</p>
+      </div>
+
+      <div class="box slide-up">
+        <h3>Delivery Services</h3>
+        <p>Tunafikisha chakula popote ndani ya mji.</p>
+      </div>
+
+      <div class="box slide-up">
+        <h3>VIP Dining Area</h3>
+        <p>Sehemu ya wageni maalum na huduma ya kipekee.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Restaurant Gallery</h2>
+
+    <div class="gallery-container">
+      <img src="R.jpg" alt="anterior">
+      <img src="D.jpeg" alt="Food 1">
+      <img src="H.jpeg" alt="Food 2">
+      <img src="G.jpeg" alt="Food 3">
+      <img src="M.jpeg" alt="Interior">
+      <img src="O.jpg" alt="Chefs">
+      <img src="J.jpeg" alt="Restaurant">
+    </div>
+    
+  </section>
+
+  <!-- Book Now Section -->
+  <section id="book" class="book">
+    <h2>Book a Table</h2>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="number" placeholder="People" required>
+      <input type="date" required>
+      <input type="time" required>
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+  <button>
+    <a href="haico.html">Back to Home Page </a>
+  </button>
+</body>
+
+</html>
